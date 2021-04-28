@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.tyss.springtest.Branch" id="branch" autowire-candidate = "false">
+		<constructor-arg name="branch_id" value="101"></constructor-arg>
+		<constructor-arg name="branch_name" value="Mechanical"></constructor-arg>
+	</bean>
+	<bean class = "com.tyss.springtest.Branch" id = "branch1" >
+	<property name="branch_id" value = "102"></property>
+	<property name="branch_name" value = "CS"></property>
+	</bean>
+	<bean class = "com.tyss.springtest.Branch" id = "branch2" autowire-candidate = "false">
+	<property name="branch_id" value = "103"></property>
+	<property name="branch_name" value = "EC"></property>
+	</bean>
+
+</beans>
